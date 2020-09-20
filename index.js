@@ -114,4 +114,4 @@ if(!args[1]) return message.reply ('Error, please define second argument')
   }
 });
 
-client.login(config.token);
+client.login(process.env.TOKEN);
