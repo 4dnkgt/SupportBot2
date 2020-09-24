@@ -112,12 +112,6 @@ const user = message.mentions.users.first();
 if(!args[1]) return message.reply ('Error, please define second argument')
             message.channel.bulkDelete(args[1]); //please note that you need other code that i posted
   }
-  
-  if(comand === "suggest") {
-  const argu = args[0]
-  let channel = message.guild.channels.cache.find(a => a.name === `suggestions`)
-  channel.send(argu)
-  }
 });
 
 client.login(process.env.TOKEN);
