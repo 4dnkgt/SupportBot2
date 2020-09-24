@@ -9,7 +9,7 @@ client.on("ready", () => {
 });
 
 client.on('guildMemberAdd', member => {
- member.send("Welcome, to Among US Bot Discord Server Consider Upvoting If you like this bot!")
+ member.send("Welcome, to Among US Bot Discord Server Consider Upvoting If you like this bot! https://discordbotlist.com/bots/among-us-bot/upvote")
 });
 
 
@@ -111,6 +111,16 @@ const user = message.mentions.users.first();
    if(command === "purge") {
 if(!args[1]) return message.reply ('Error, please define second argument')
             message.channel.bulkDelete(args[1]); //please note that you need other code that i posted
+  }
+  
+  if(comand === "suggest") {
+  const argu = args[0]
+  if(argu.contains("Fuck", "Bad Bot", "Shit", "noob", "shite", "fucker", "motherfucker")) {
+  message.author.send("Hey, thats not allowed")
+  return;
+  }
+  let channel = message.guild.channels.cache.find(a => a.name === `suggestions`)
+  channel.send(argu)
   }
 });
 
