@@ -115,10 +115,6 @@ if(!args[1]) return message.reply ('Error, please define second argument')
   
   if(comand === "suggest") {
   const argu = args[0]
-  if(argu.contains("Fuck", "Bad Bot", "Shit", "noob", "shite", "fucker", "motherfucker")) {
-  message.author.send("Hey, thats not allowed")
-  return;
-  }
   let channel = message.guild.channels.cache.find(a => a.name === `suggestions`)
   channel.send(argu)
   }
